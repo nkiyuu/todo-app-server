@@ -1,6 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const express = require("express");
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+const express = require('express');
+const app = express();
 const router = express.Router();
-console.log("kore de iino ?");
-//# sourceMappingURL=app.js.map
+router.get('/', (req, res) => {
+  res.json({ message: 'hello' });
+});
+app.use(router);
+app.listen(3000);
+console.log('start server localhost:3000');
+// # sourceMappingURL=app.js.map
